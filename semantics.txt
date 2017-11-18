@@ -1,0 +1,17 @@
+class GameConfig:
+    views: [View]
+    initial_view_id: int
+
+class View:
+    background_image: string?
+    description: string
+    choices: [Choice]
+
+class Choice:
+    description: string
+    target_view_id: int
+
+class RenderedState:
+    description: string
+    background_image: string?
+    choices: [Choice]
