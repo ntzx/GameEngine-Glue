@@ -11,8 +11,3 @@ window.addEventListener("load", () => {
     board = new paint.Board(game, document.getElementById("game-board"));
     board.draw();
 });
-
-window.reset_game = function() {
-    game.reset();
-    board.draw();
-}
