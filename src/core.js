@@ -25,6 +25,11 @@ class Game {
         this.native_functions.load_config(this.handle, JSON.stringify(cfg));
     }
 
+    reset() {
+        this.ensure_valid();
+        gec._gec_game_reset(this.handle);
+    }
+
     render() {
         this.ensure_valid();
         let s_handle = gec._gec_game_render(this.handle);

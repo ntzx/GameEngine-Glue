@@ -1,17 +1,9 @@
 const core = require("./core.js");
 
 let game = new core.Game();
-game.load_config({
-    views: [
-        {
-            "description": "Initial view",
-            "choices": []
-        }
-    ],
-    initial_view_id: 0
-});
+game.load_config(require("./test_config.js"));
 let output = game.render();
-console.log(output);
+//console.log(output);
 
 game.destroy();
 
